@@ -2,7 +2,7 @@ package collection.treeSet;
 
 import java.util.Comparator;
 
-public class Member implements Comparator<Member>{
+public class Member implements Comparator<Member>{		//Comparable<Member> //정렬인터페이스 두종류
 	private int memberID;
 	private String memberName;
 	
@@ -42,14 +42,23 @@ public class Member implements Comparator<Member>{
 		// TODO Auto-generated method stub
 		return memberID;
 	}
-	/*@Override
+	/*@Override												//Comparable<T> 오버라이딩 메서드 구현
 	public int compareTo(Member member) {
-		return this.memberName.compareTo(member.getMemberName());
-		//return (this.memberID -member.memberID)*(-1);
+		//양수반환 오름차순 음수반환 내림차순
+		//return (this.memberID -member.memberID)*(-1);    	- 비교대상이 숫자일때 내림차순 정렬
+		//return (member.memberID - this.memeber)			- 비교대상이 숫자일때 내림차순 정렬
+		  
+		//return (this.memberID - member.memberID) 			- 비교대상이 숫자일때 오름차순 정렬
+		  
+		//int num1= this.memberName.compareTo(member.getMemberName());
+		//int num2 = member.memberName.compareTo(this.getMemberName());
+		//System.out.println("this: "+num1+", member: "+num2);
+		//return this.memberName.compareTo(member.getMemberName()); //-비교대상 String 오름차순
+		//return member.memberName.compareTo(this.getMemberName()); //-비교대상 String 내림차순
 	}*/
-	@Override
-	public int compare(Member member1, Member member2) {
-		return (member1.memberID -member2.memberID);//
+	@Override												//Comparator<T> 오버라이딩 메서드 구현
+	public int compare(Member member1, Member member2) {	//첫번째로 넘어온 member1이 this라고 보면된다.
+		return (member1.memberID -member2.memberID);		//오름차순 정렬
 	}
 	
 	

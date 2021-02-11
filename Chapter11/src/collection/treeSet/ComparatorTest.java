@@ -8,7 +8,7 @@ class MyCompare implements Comparator<String>{
 	@Override
 	public int compare(String s1, String s2) {
 		// TODO Auto-generated method stub
-		return s1.compareTo(s2)*(-1);
+		return s1.compareTo(s2)*(-1);		//Comparator인터페이스의 내림차순 방식
 	}
 	
 }
