@@ -19,7 +19,7 @@ public class MemberTreeMap {
 	public boolean removeMember(int memberID) {
 		if(treeMap.containsKey(memberID)) {
 			treeMap.remove(memberID);
-			return true;
+			return true;    
 		}
 		System.out.println("회원번호가 없습니다.");
 		return false;
