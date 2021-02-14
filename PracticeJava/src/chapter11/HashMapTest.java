@@ -18,13 +18,24 @@ public class HashMapTest {
 		hashMap.put("гого", new Integer(0));
 		
 		
-		for(String key :hashMap.keySet()) {
+	/*	for(String key :hashMap.keySet()) {
 			if(hashMap.get(key)!=0) {
 				answer = key;
 			}
-		}
+		}*/
 		
+		Iterator<String> it = hashMap.keySet().iterator();
+		
+		while(it.hasNext()) {
+			String key = it.next();
+			if(hashMap.get(key)!=0) {
+				System.out.println(key +" : "+hashMap.get(key));
+				answer = key;
+			}
+		}
 		System.out.println(answer);
+		
+		
 	}
 
 }
