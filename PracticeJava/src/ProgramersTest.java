@@ -5,22 +5,27 @@ import java.util.Iterator;
 public class ProgramersTest {
 
 	public static String solution(String[] participant, String[] completion) {
-		  int k = 0;
-	        for(int i = 0; i < participant.length; i++){
-	             for(int j = 0; j < participant.length -1; j++){
-	                    if(participant[i].equals(completion[j])){
-	                        participant[i] = "null";
-	                        break;
-	                    }       
-	             }
-	        }
-	        while(true){
-	            if(!participant[k].equals("null")){
-	                break;
-	            }
-	            k++;
-	        }
-	        return participant[k];
+		String answer = "";
+		
+		Arrays.sort(participant);
+		Arrays.sort(completion);
+		
+		int i =0;
+		 while(i<completion.length) {
+			 if(!completion[i].equals(participant[i])) {
+				 answer = participant[i];
+				 break;
+			 }else {
+				 i++;
+			 }
+		 }
+		 
+		 if(answer.equals("")) {
+			answer =  participant[participant.length-1];
+		 }
+		 
+		
+	        return answer;
 	}
 	public static void main(String[] args) {
 
