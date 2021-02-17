@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class IntArrayTest {
 
 	public static void main(String[] args) {
-		
+		//어레이(배열)의 스트림 사용방법
 		int[] arr = {1,2,3,4,5};
 		
 		int sum = Arrays.stream(arr).sum();

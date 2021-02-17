@@ -1,10 +1,10 @@
-package lamda;
+package lambda;
 
 interface PrintString{
 	void showString(String str);
 }
 
-public class TestLamda {
+public class TestLambda {
 
 	public static void main(String[] args) {
 		
